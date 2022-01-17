@@ -1,4 +1,5 @@
 :root{
+    --lightOrange: #e99041;
     --orange: #e67e22;
     --blue: #2980b9;
 }
@@ -129,5 +130,93 @@ main{
 }
 
 
+.div_signUp{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid red;
+    width: 60%;
+    height: 70vh;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    top: 15%;
+    left: 23%;
+    transform: translate(0%, -15%);
+    visibility: hidden;
+    opacity: 0;
+}
+
+/*************When user click sign up************/
+.is-active{
+    visibility: visible;
+    opacity: 100%;
+    transition: 1s ease-in-out;
+    transform: translate(0%,-0.5%);
+}
+/*************When user click sign up************/
+
+.signUp_image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.11)), url("/abstract_background2.jpg");
+    background-position: cover;
+}
+
+.signUp_image object{
+    margin-top: 10rem;
+    width: 100%;
+}
+
+.signUp_form form{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    column-gap: 0.4375rem;
+    row-gap: 1.2rem;
+    justify-content: center;
+}
+
+.signUp_form span{
+    margin-top: 4rem;
+    margin-bottom: 2.2rem;
+    grid-column: span 2;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.signUp_form input{
+    padding: 0.4375rem;
+}
+
+.signUp_form form input[type=text]{
+}
+
+.signUp_form form input[type=email],
+.signUp_form form input[type=password]{
+    grid-column: span 2;
+}
+
+.signUp_form button{
+    margin-top: 1rem;
+    grid-column: span 2;
+    padding: 0.4375rem;
+    color: #fff;
+    background-color: var(--lightOrange);
+    border: 1px solid var(--lightOrange);
+    cursor: pointer;
+}
+
+.signUp_form button:hover{
+    background-color: var(--orange);
+    transition: 0.2s ease-in;
+}
 
 
+
+/*DISABLE TEXT HIGHLIGHTING*/
+.disable-text{
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
+         -moz-user-select:none;
+         -ms-user-select:none;
+         user-select:none;   
+
+   }
