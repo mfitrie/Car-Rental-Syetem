@@ -1,0 +1,132 @@
+:root{
+    --orange: #e67e22;
+    --blue: #2980b9;
+}
+
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #f6f6f6;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 12.5rem 12.5rem;
+    justify-items: center;
+    justify-content: center;
+    height: 10vh;
+    column-gap: 45rem;
+}
+
+.header_span_title{
+    /* border: 1px solid red; */
+    height: fit-content;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.header_span_title::after{
+    content: "";
+    position: absolute;
+    background-color: var(--orange);
+    width: 30%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+
+.header_ul_button{
+    width: 140%;
+}
+
+.header_ul_button li{
+    list-style: none;
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.header_ul_button li:first-child{
+    margin-right: 1rem;
+}
+
+.header_ul_button li:last-child{
+    color: #eee;
+    background-color: var(--blue);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 90vh;
+}
+
+.main_div_box{
+    /* border: 1px solid red; */
+    padding: 7rem;
+}
+
+.main_div_title{
+    /* border: 1px solid red; */
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    line-height: 2;
+}
+
+.main_div_title::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    background-color: var(--orange);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+
+.main_div_description{
+    /* border: 1px solid red; */
+    margin-top: 1rem;
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.main_div_pictureBox{
+    /* border: 1px solid red; */
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-image: url("abstract_background.jpg");
+    background-position: cover;
+    background-size: 200%;
+    position: relative;
+}
+
+.main_pictureBox_picture{
+    position: absolute;
+    margin-top: 3rem;
+    top: 50%;
+    left: 20%; 
+    transform: translate(-60%, -50%);
+
+}
+
+.main_pictureBox_picture img{
+    width: 150%;
+
+}
+
+
+
+
