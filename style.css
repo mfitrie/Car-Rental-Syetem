@@ -19,14 +19,14 @@ header{
     grid-template-columns: 12.5rem 12.5rem;
     justify-items: center;
     justify-content: center;
-    height: 10vh;
-    column-gap: 45rem;
+    height: 15vh;
+    column-gap: 60rem;
 }
 
 .header_span_title{
     /* border: 1px solid red; */
     height: fit-content;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     font-size: 1.5rem;
     font-weight: 600;
     position: relative;
@@ -52,10 +52,11 @@ header{
     list-style: none;
     /* border: 1px solid red; */
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
     border-radius: 8px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .header_ul_button li:first-child{
@@ -70,12 +71,12 @@ header{
 main{
     display: grid;
     grid-template-columns: 60% 40%;
-    height: 90vh;
+    height: 85vh;
 }
 
 .main_div_box{
     /* border: 1px solid red; */
-    padding: 7rem;
+    padding: 9rem;
 }
 
 .main_div_title{
