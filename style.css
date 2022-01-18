@@ -134,7 +134,7 @@ main{
     position: fixed;
     display: grid;
     grid-template-columns: 50% 50%;
-    border: 1px solid red;
+    border: 1px solid #000;
     width: 60%;
     height: 70vh;
     border-radius: 10px;
@@ -152,6 +152,7 @@ main{
     opacity: 100%;
     transition: 1s ease-in-out;
     transform: translate(0%,-0.5%);
+    z-index: 5;
 }
 /*************When user click sign up************/
 
@@ -209,6 +210,105 @@ main{
     transition: 0.2s ease-in;
 }
 
+
+
+/****************sign in****************/
+.div_signIn{
+    position: fixed;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid #000;
+    /* width: 60%; */
+    height: 60vh;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    top: 15%;
+    left: 23%;
+    transform: translate(0%, -15%);
+    width: 60%;
+
+    visibility: hidden;
+    opacity: 0%;
+}
+
+
+
+.div_signIn form{
+    display: grid;
+    grid-template-columns: 80%;
+    column-gap: 0.4375rem;
+    row-gap: 1.2rem;
+    justify-content: center;
+}
+
+.div_signIn span{
+    margin-top: 3rem;
+    margin-bottom: 2.2rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.div_signIn input,
+.div_signIn button{
+    padding: 0.4375rem;
+}
+
+.div_signIn button{
+    margin-top: 1.5rem;
+    color: #fff;
+    background-color: var(--lightOrange);
+    border: 1px solid var(--lightOrange);
+    cursor: pointer;
+}
+
+.div_signIn button:hover{
+    background-color: var(--orange);
+    transition: 0.3s ease-in;
+}
+
+.signInImage object{
+    margin-top: 7rem;
+    /* width: 100%; */
+}
+
+.isSignIn-active{
+    transform: translate(0%, -0.5%);
+    transition: 1s ease-in-out;
+    visibility: visible;
+    opacity: 100%;
+    z-index: 5;
+}
+
+
+
+/****************sign in****************/
+
+
+/***************ICON***************/
+.iconCloseSignUp{
+    top: 1%;
+    left: 94%;
+    cursor: pointer;
+}
+
+.iconCloseSignIn{
+    top: 1%;
+    left: 94%;
+    cursor: pointer;
+}
+/***************ICON***************/
+
+
+.background-popup{
+    position: fixed;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.233);
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
 
 
 /*DISABLE TEXT HIGHLIGHTING*/
