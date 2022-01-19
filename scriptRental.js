@@ -6,9 +6,9 @@ const iconLeft = document.querySelector('.iconLeft');
 const iconRight = document.querySelector('.iconRight');
 
 
-let i = 0;
+let i = 10;
 
-iconLeft.addEventListener('click', function(e){
+iconRight.addEventListener('click', function(e){
 
     i=i+10;
     
@@ -32,7 +32,7 @@ iconLeft.addEventListener('click', function(e){
 
 
 
-iconRight.addEventListener('click', function(e){
+iconLeft.addEventListener('click', function(e){
 
     i=i-10;
     if(i < 0){
