@@ -2,6 +2,7 @@
     --lightOrange: #e99041;
     --orange: #e67e22;
     --blue: #2980b9;
+    --darkBlue: #20638f;
     --lightRed: #ed7669;
     --red: #e74c3c;
 }
@@ -224,3 +225,157 @@ main{
     background-color: var(--blue);
 }
 /***********************inside card***********************/
+
+
+
+
+
+/***********************rent form***********************/
+.main_div_rentalFormContainer{
+    border: 1px solid #000;
+    border-radius: 8px;
+    position: fixed;
+    width: 60%;
+    height: 60%;
+    background-color: #eee;
+    left: 23%;
+    transform: translateY(-10%);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    opacity: 0%;
+    visibility: hidden;
+}
+
+.main_rentalFormContainer_carImage{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.11)), url("/abstract_background2.jpg");
+}
+
+.main_rentalFormContainer_carImage img{
+    margin-top: 2rem;
+    width: 28rem;
+    height: 20rem;
+    /* background-color: #a2a2a2; */
+}
+
+
+
+
+.main_rentalFormContainer_rentalForm{
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: 50% 50%;
+    /* grid-auto-rows: minmax(10%, auto); */
+    grid-template-rows: 10% 5% 10% 5% 10% 5% 10% 15% auto;
+    grid-template-areas: 
+        "title title"
+        "labelLocation labelLocation"
+        "inputLocation inputLocation"
+        "labelFromDate labelToDate"
+        "inputFromDate inputToDate"
+        "labelVehicle labelVehicle"
+        "vehicleName vehicleName"
+        "submit submit"
+    ;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    justify-content: center;
+}
+
+.main_rentalFormContainer_rentalForm span:first-child{
+    grid-area: title;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.main_rentalFormContainer_rentalForm label:nth-child(2){
+    grid-area: labelLocation;
+}
+
+.main_rentalFormContainer_rentalForm select{
+    grid-area: inputLocation;
+    cursor: pointer;
+}
+
+.main_rentalFormContainer_rentalForm label:nth-child(4){
+    grid-area: labelFromDate;
+}
+
+.main_rentalFormContainer_rentalForm label:nth-child(6){
+    grid-area: labelToDate;
+}
+
+.main_rentalFormContainer_rentalForm input[type=date]:first-child{
+    grid-area: inputFromDate;
+}
+
+.main_rentalFormContainer_rentalForm input[type=date]:last-child{
+    grid-area: inputToDate;
+}
+
+.main_rentalFormContainer_rentalForm label:last-of-type{
+    grid-area: labelVehicle;
+}
+
+.main_rentalFormContainer_rentalForm span:last-of-type{
+    grid-area: vehicleName;
+    background-color: #ddd;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.main_rentalFormContainer_rentalForm button{
+    grid-area: submit;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--blue);
+    border: 1px solid #000;
+    border-radius: 8px;
+    margin-top: 1rem;
+
+}
+
+.main_rentalFormContainer_rentalForm button:hover{
+    background-color: var(--darkBlue);
+    transition: 0.3s ease-in;
+}
+
+.main_rentalFormContainer_rentalForm input,
+.main_rentalFormContainer_rentalForm select
+{
+    border-radius: 5px;
+    border-style: none;
+    padding: 0.5rem;
+}
+
+.iconCloseForm{
+    position: absolute;
+    left: 97%;
+    top: 1%;
+    cursor: pointer;
+}
+
+.form-active{
+    visibility: visible;
+    opacity: 100%;
+    transform: translateY(6%);
+    transition: 0.7s ease-in-out;
+    z-index: 2;
+}
+
+/***********************rent form***********************/
+
+
+
+/***********************gray background**********************/
+.background-popup{
+    position: fixed;
+    top: 0%;
+    background-color: rgba(0, 0, 0, 0.233);
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+}
+/***********************gray background**********************/
+

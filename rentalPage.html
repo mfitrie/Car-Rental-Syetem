@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href='https://css.gg/chevron-left-o.css' rel='stylesheet'>
     <link href='https://css.gg/chevron-right-o.css' rel='stylesheet'>
+    <link href='https://css.gg/close.css' rel='stylesheet'>
     <link rel="stylesheet" href="styleRental.css">
     <script defer src="scriptRental.js"></script>
     <title>Rental Page</title>
@@ -144,6 +145,33 @@
                 <i class="gg-chevron-left-o iconLeft"></i>
                 <i class="gg-chevron-right-o iconRight"></i>
             </div>
+
+        </div>
+        <div class="main_div_rentalFormContainer ">
+            <div class="main_rentalFormContainer_carImage">
+                <!-- <img src="Car_Image/honda_civic.png" alt="honda-civic"> -->
+            </div>
+            <i class="gg-close iconCloseForm"></i>
+            <form action="#" class="main_rentalFormContainer_rentalForm">
+                <span>Choose your booking</span>
+                <label for="location">Location</label>
+                <select name="location">
+                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                    <option value="Shah Alam">Shah Alam</option>
+                    <option value="Klang">Klang</option>
+                    <option value="Rawang">Rawang</option>
+                    <option value="Kota Damansara">Kota Damansara</option>
+                </select>
+                <label for="fromDate">From Date</label>
+                <input type="date" name="fromDate">
+                <label for="toDate">To Date</label>
+                <input type="date" name="toDate">
+                <label for="vehicleName">Vehicle Name</label>
+                <span class="vehicleName" name="vehicleName"></span>
+                <button>Confirm Booking</button>
+            </form>
+        </div>
+        <div class="background-popup">
 
         </div>
     </main>
