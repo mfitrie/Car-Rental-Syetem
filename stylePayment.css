@@ -376,7 +376,7 @@ main{
     display: block;
     width: 100vw;
     height: 100vh;
-    visibility: hidden;
+    visibility: visible;
 }
 /***********************gray background**********************/
 
@@ -563,6 +563,7 @@ main{
     visibility: visible;
     opacity: 100%;
     transform: translateY(-5%);
-    transition: 1s ease-in-out;
+    z-index: 3;
+    transition: 1s ease-out;
 }
 /***********************payment**********************/

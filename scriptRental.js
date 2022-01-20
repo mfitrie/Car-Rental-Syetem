@@ -11,6 +11,9 @@ const carImage = document.querySelector('.main_rentalFormContainer_carImage');
 const carNameForm = document.querySelector('.vehicleName');
 const buttonConfirmRent = document.querySelector('.main_rentalFormContainer_rentalForm button');
 
+// // Payement form
+// const paymentContainer = document.querySelector('.main_div_paymentContainer');
+
 // DATA CAR
 const listCarImage = ["Car_Image/honda_civic.png", "Car_Image/ford_mustang.png", "Car_Image/nissan-gtr.png", "Car_Image/honda_jazz.png", "Car_Image/toyota_vios.png", "Car_Image/perodua_aruz.png", "Car_Image/perodua_myvi.png"];
 const listCarName = ["Honda Civic", "Ford Mustang", "Nissan GTR", "Honda Jazz", "Toyota Vios", "Perodua Aruz", "Perodua Myvi"];
@@ -19,6 +22,7 @@ const listCarName = ["Honda Civic", "Ford Mustang", "Nissan GTR", "Honda Jazz", 
 const iconLeft = document.querySelector('.iconLeft');
 const iconRight = document.querySelector('.iconRight');
 const iconCloseForm = document.querySelector('.iconCloseForm');
+const iconClosePayment = document.querySelector('.iconClosePayment');
 
 
 // OTHER
