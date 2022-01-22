@@ -566,4 +566,9 @@ main{
     z-index: 3;
     transition: 1s ease-out;
 }
+
+a{
+    text-decoration: none;
+    color: #000;
+}
 /***********************payment**********************/

@@ -25,7 +25,7 @@ header{
     justify-items: center;
     justify-content: center;
     height: 15vh;
-    column-gap: 60rem;
+    column-gap: 50rem;
 }
 
 .header_span_title{
@@ -50,7 +50,7 @@ header{
 }
 
 .header_ul_button{
-    width: 140%;
+    width: 250%;
 }
 
 .header_ul_button li{
@@ -64,7 +64,90 @@ header{
     cursor: pointer;
 }
 
-.header_ul_button li:first-child{
+.header_ul_button div li::before{
+    content: url(/car_rent.svg);
+    margin-top: 1.5rem;
+}
+
+/************************tooltip************************/
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.List-rent-card{
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    /* visibility: visible; */
+    opacity: 100%;
+
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    width: 20rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: translateX(-55%);
+    z-index: 1;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.List-rent-card img{
+    /* display: inline-block; */
+    width: 6rem;
+    height: 4rem;
+    background-color: #a2a2a2;
+    border-radius: 5px;
+}
+
+.List-rent-card div{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+}
+
+.List-rent-card .carName{
+    text-transform: capitalize;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.List-rent-card .rentDate{
+    display: block;
+    margin-top: 1rem;
+}
+
+.List-rent-card .fromDate,
+.List-rent-card .toDate{
+    color: var(--red);
+    font-weight: 600;
+}
+
+
+
+.List-rent-card:hover{
+    background-color: #ddd;
+}
+
+
+.dropdown:hover .List-rent-card{
+    /* display: block; */
+    visibility: visible;
+    opacity: 100%;
+    transition: 0.2s ease-in;
+}
+
+
+/************************tooltip************************/
+
+
+
+.header_ul_button li:first-child,
+.header_ul_button li:nth-child(2){
     margin-right: 1rem;
 }
 

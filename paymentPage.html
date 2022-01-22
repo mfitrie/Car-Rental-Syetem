@@ -38,14 +38,14 @@
         <div class="background-popup"></div>
 
         <div class="main_div_paymentContainer payment-active">
-            <i class="gg-close iconClosePayment"></i>
+            <a href="#"><i class="gg-close iconClosePayment"></i></a>
             <p>Credit Card Details</p>
             <img src="/card_debit.png" alt="card debit">
             <form action="#">
                 <label for="price">Price</label>
                 <span>RM 0000</span>
                 <label for="cardName">Name on Card</label>
-                <input type="text" name="cardName" placeholder="Your Name on Card">
+                <input type="text" name="cardName" placeholder="Your Name on Card" required>
                 <label for="cardNumber">Card Number</label>
                 <input type="number" name="cardNumber" placeholder="xxxx xxxx xxxx xxxx" required>
                 <div>
@@ -54,11 +54,11 @@
                 </div>
                 <label for="expirationDate">Expiration Date</label>
                 <div>
-                    <input type="number" name="cardMonth" min="0" max="99" placeholder="01">
-                    <input type="number" name="cardYear" min="2010" max="2025" placeholder="2010">
+                    <input type="number" name="cardMonth" min="0" max="99" placeholder="01" required>
+                    <input type="number" name="cardYear" min="2010" max="2025" placeholder="2010" required>
                 </div>            
                 <label for="securityCode">Security Code</label>
-                <input type="number" name="cardSecurityCode" min="0" max="999" placeholder="253">
+                <input type="number" name="cardSecurityCode" min="0" max="999" placeholder="253" required>
                 <button>Pay</button>
             </form>
         </div>

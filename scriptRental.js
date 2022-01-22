@@ -25,10 +25,16 @@ const iconCloseForm = document.querySelector('.iconCloseForm');
 const iconClosePayment = document.querySelector('.iconClosePayment');
 
 
+// CURRENT RENT DROPDOWN MENU
+const currentRent = document.querySelector('.List-rent-card');
+
+
 // OTHER
 const popupBackground = document.querySelector('.background-popup');
 
 
+
+///////////////////////////// ARROW NAVIGATION ///////////////////////////// 
 let i = 10;
 
 iconRight.addEventListener('click', function(e){
@@ -75,9 +81,13 @@ iconLeft.addEventListener('click', function(e){
 
 });
 
+///////////////////////////// ARROW NAVIGATION ///////////////////////////// 
 
 
 
+
+
+///////////////////////////// FORM ///////////////////////////// 
 
 car1.addEventListener('click', (e)=>{
     if(e.target === e.currentTarget.childNodes[7]){
@@ -185,6 +195,8 @@ car7.addEventListener('click', (e)=>{
     }
 });
 
+///////////////////////////// FORM ///////////////////////////// 
+
 
 // button rent form
 buttonConfirmRent.addEventListener('click', (e)=>{
@@ -205,5 +217,27 @@ iconCloseForm.addEventListener('click', ()=>{
 
 
 
-// console.log(car1.getAttribute(dataId));
+currentRent.addEventListener('click', ()=>{
+    Swal.fire({
+        title: 'Return the car now?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, return the car'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      });
+});
+
+
+
+
 

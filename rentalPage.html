@@ -11,6 +11,7 @@
     <link href='https://css.gg/chevron-right-o.css' rel='stylesheet'>
     <link href='https://css.gg/close.css' rel='stylesheet'>
     <link rel="stylesheet" href="styleRental.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="scriptRental.js"></script>
     <title>Rental Page</title>
 </head>
@@ -18,7 +19,18 @@
     <header>
         <span class="header_span_title">RentalX</span>
         <ul class="header_ul_button">
-            <li>username</li>
+            <li>Mr. username</li>
+            <div class="dropdown">
+                <li>Current Rent</li>
+                <div class="List-rent-card">
+                    <!-- <p>No car rent yet. Find a nice car and rent it ;)</p> -->
+                    <img src="/Car_Image/ford_mustang.png" alt="car">
+                    <div>
+                        <span class="carName">ford mustang</span>
+                        <span class="rentDate">From <span class="fromDate">11/2/2020</span> to <span class="toDate">2/11/2021</span></span>
+                    </div>
+                </div>
+            </div>
             <li>Log out</li>
         </ul>
     </header>
