@@ -2,6 +2,7 @@
 
 const selectCard = document.querySelector('.main_rentSelect_card');
 const [car1, car2, car3, car4, car5, car6, car7] = document.querySelectorAll('.card_property');
+console.log(car1);
 const dataId = "data-id";
 
 const rentForm = document.querySelector('.main_div_rentalFormContainer');
@@ -90,7 +91,7 @@ iconLeft.addEventListener('click', function(e){
 ///////////////////////////// FORM ///////////////////////////// 
 
 car1.addEventListener('click', (e)=>{
-    if(e.target === e.currentTarget.childNodes[7]){
+    if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car1.getAttribute(dataId));
@@ -106,7 +107,7 @@ car1.addEventListener('click', (e)=>{
 });
 
 car2.addEventListener('click', (e)=>{
-    if(e.target === e.currentTarget.childNodes[7]){
+    if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car2.getAttribute(dataId));
@@ -122,7 +123,7 @@ car2.addEventListener('click', (e)=>{
 });
 
 car3.addEventListener('click', (e)=>{
-    if(e.target === e.currentTarget.childNodes[7]){
+    if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
         
         carForm.setAttribute('data-id', car3.getAttribute(dataId));
@@ -138,7 +139,7 @@ car3.addEventListener('click', (e)=>{
 });
 
 car4.addEventListener('click', (e)=>{
-    if(e.target === e.currentTarget.childNodes[7]){
+    if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
         
         carForm.setAttribute('data-id', car4.getAttribute(dataId));
@@ -153,7 +154,7 @@ car4.addEventListener('click', (e)=>{
 });
 
 car5.addEventListener('click', (e)=>{
-    if(e.target === e.currentTarget.childNodes[7]){
+    if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car5.getAttribute(dataId));
@@ -168,7 +169,7 @@ car5.addEventListener('click', (e)=>{
 });
 
 car6.addEventListener('click', (e)=>{
-    if(e.target === e.currentTarget.childNodes[7]){
+    if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car6.getAttribute(dataId));
@@ -182,7 +183,7 @@ car6.addEventListener('click', (e)=>{
 });
 
 car7.addEventListener('click', (e)=>{
-    if(e.target === e.currentTarget.childNodes[7]){
+    if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car7.getAttribute(dataId));

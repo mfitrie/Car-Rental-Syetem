@@ -215,13 +215,7 @@ main{
     transition: 0.3s ease-in-out;
 }
 
-.main_card_car1,
-.main_card_car2,
-.main_card_car3,
-.main_card_car4,
-.main_card_car5,
-.main_card_car6,
-.main_card_car7{
+.main_card_car{
     /* display: inline-block; */
     /* width: 20%; */
     width: 10%;
@@ -330,7 +324,7 @@ main{
 }
 
 .main_rentalFormContainer_carImage{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.11)), url("/abstract_background2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.11)), url("abstract_background2.jpg");
 }
 
 .main_rentalFormContainer_carImage img{
