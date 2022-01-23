@@ -23,12 +23,12 @@
             <div class="dropdown">
                 <li>Current Rent</li>
                 <div class="List-rent-card">
-                    <!-- <p>No car rent yet. Find a nice car and rent it ;)</p> -->
-                    <img src="/Car_Image/ford_mustang.png" alt="car">
+                    <p>No car rent yet. Find a nice car and rent it ;)</p>
+                    <!-- <img src="ford_mustang.png" alt="car">
                     <div>
                         <span class="carName">ford mustang</span>
                         <span class="rentDate">From <span class="fromDate">11/2/2020</span> to <span class="toDate">2/11/2021</span></span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <li>Log out</li>
@@ -43,7 +43,7 @@
             <div class="main_rentSelect_card">
                 <div class="main_card_car1 card_property" data-id="honda-civic">
                     <div class="main_card_imageHolder">
-                        <img src="/Car_Image/honda_civic.png" alt="honda_civic">
+                        <img src="honda_civic.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
                         Honda Civic
@@ -58,7 +58,7 @@
                 </div>
                 <div class="main_card_car2 card_property" data-id="ford-mustang">
                     <div class="main_card_imageHolder">
-                        <img src="/Car_Image/ford_mustang.png" alt="honda_civic">
+                        <img src="ford_mustang.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
                         Honda Civic
@@ -74,7 +74,7 @@
 
                 <div class="main_card_car3 card_property" data-id="nissan-gtr">
                     <div class="main_card_imageHolder">
-                        <img src="/Car_Image/nissan-gtr.png" alt="honda_civic">
+                        <img src="nissan-gtr.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
                         Honda Civic
@@ -90,7 +90,7 @@
 
                 <div class="main_card_car4 card_property" data-id="honda-jazz">
                     <div class="main_card_imageHolder">
-                        <img src="/Car_Image/honda_jazz.png" alt="honda_civic">
+                        <img src="honda_jazz.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
                         Honda Civic
@@ -105,7 +105,7 @@
                 </div>
                 <div class="main_card_car5 card_property" data-id="toyota-vios">
                     <div class="main_card_imageHolder">
-                        <img src="/Car_Image/toyota_vios.png" alt="honda_civic">
+                        <img src="toyota_vios.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
                         Honda Civic
@@ -121,7 +121,7 @@
 
                 <div class="main_card_car6 card_property" data-id="perodua-aruz">
                     <div class="main_card_imageHolder">
-                        <img src="/Car_Image/perodua_aruz.png" alt="honda_civic">
+                        <img src="perodua_aruz.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
                         Honda Civic
@@ -137,7 +137,7 @@
 
                 <div class="main_card_car7 card_property" data-id="perodua-myvi">
                     <div class="main_card_imageHolder">
-                        <img src="/Car_Image/perodua_myvi.png" alt="honda_civic">
+                        <img src="perodua_myvi.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
                         Honda Civic

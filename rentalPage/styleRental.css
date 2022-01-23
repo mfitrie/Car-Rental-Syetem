@@ -65,7 +65,7 @@ header{
 }
 
 .header_ul_button div li::before{
-    content: url(/icon/car_rent.svg);
+    content: url(car_rent.svg);
     margin-top: 1.5rem;
 }
 

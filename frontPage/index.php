@@ -32,13 +32,13 @@
         </div>
         <div class="main_div_pictureBox">
             <div class="main_pictureBox_picture">
-                <img src="/Car_Image/car_lexus.png" alt="car picture">
+                <img src="car_lexus.png" alt="car picture">
             </div>
         </div>
     </main>
     <div class="div_signUp">
         <div class="signUp_image">
-            <object data="/icon/RentalX.svg" type="image/svg+xml" class="SignUpTitle"></object>
+            <object data="RentalX.svg" type="image/svg+xml" class="SignUpTitle"></object>
         </div>
         <div class="signUp_form">
         <i class="gg-close iconCloseSignUp"></i>
@@ -55,7 +55,7 @@
 
    <div class="div_signIn ">
        <div class="signUp_image signInImage">
-        <object data="/icon/RentalX.svg" type="image/svg+xml" class="SignUpTitle"></object>
+        <object data="RentalX.svg" type="image/svg+xml" class="SignUpTitle"></object>
        </div>
        <div class="signIn_form">
         <i class="gg-close iconCloseSignIn"></i>
