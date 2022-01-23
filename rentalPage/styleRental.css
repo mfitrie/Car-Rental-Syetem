@@ -103,7 +103,7 @@ header{
     border-radius: 5px;
 }
 
-.List-rent-card div{
+.List-rent-card div div{
     display: inline-block;
     vertical-align: top;
     font-size: 0.9rem;

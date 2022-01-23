@@ -1,5 +1,23 @@
 <?php 
     include_once('infoRent.php');
+    include_once('config.php');
+    
+    session_start();
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if(isset($email) && isset($password)){
+        $SQL = "SELECT firstName FROM customer WHERE email = '$email' ";
+        $QUERY = mysqli_query($CONNECTION, $SQL);
+
+        while($CUSTOMER_RESULT = mysqli_fetch_array($QUERY)){
+            $_SESSION['userFirstName'] = $CUSTOMER_RESULT['firstName'];
+            // echo $CUSTOMER_RESULT['firstName'];
+
+        }
+        mysqli_close($CONNECTION);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,19 +41,22 @@
     <header>
         <span class="header_span_title">RentalX</span>
         <ul class="header_ul_button">
-            <li>Mr. username</li>
+            <li>Mr. <?php echo $_SESSION['userFirstName'] ?></li>
             <div class="dropdown">
                 <li>Current Rent</li>
                 <div class="List-rent-card">
                     <p>No car rent yet. Find a nice car and rent it ;)</p>
-                    <!-- <img src="ford_mustang.png" alt="car">
-                    <div>
-                        <span class="carName">ford mustang</span>
-                        <span class="rentDate">From <span class="fromDate">11/2/2020</span> to <span class="toDate">2/11/2021</span></span>
+                    <!-- <div class="dropdownContainer">
+                        <img src="ford_mustang.png" alt="car">
+                        <div>
+                            <span class="carName">ford mustang</span>
+                            <span class="rentDate">From <span class="fromDate">11/2/2020</span> to <span class="toDate">2/11/2021</span></span>
+                        </div>
                     </div> -->
+                    
                 </div>
             </div>
-            <li>Log out</li>
+            <a href="http://localhost/Web%20Project%20ICT600/frontPage/logout.php"><li>Log out</li></a>
         </ul>
     </header>
     <main>

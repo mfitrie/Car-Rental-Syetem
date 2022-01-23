@@ -2,7 +2,6 @@
 
 const selectCard = document.querySelector('.main_rentSelect_card');
 const [car1, car2, car3, car4, car5, car6, car7] = document.querySelectorAll('.card_property');
-console.log(car1);
 const dataId = "data-id";
 
 const rentForm = document.querySelector('.main_div_rentalFormContainer');
@@ -26,8 +25,9 @@ const iconCloseForm = document.querySelector('.iconCloseForm');
 const iconClosePayment = document.querySelector('.iconClosePayment');
 
 
+
 // CURRENT RENT DROPDOWN MENU
-const currentRent = document.querySelector('.List-rent-card');
+const currentRent = document.querySelector('.dropdownContainer');
 
 
 // OTHER
@@ -218,7 +218,7 @@ iconCloseForm.addEventListener('click', ()=>{
 
 
 
-currentRent.addEventListener('click', ()=>{
+currentRent.addEventListener('click', (e)=>{
     Swal.fire({
         title: 'Return the car now?',
         text: "You won't be able to revert this!",

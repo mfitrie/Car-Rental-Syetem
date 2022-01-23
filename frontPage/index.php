@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://css.gg/close.css' rel='stylesheet'>
     <script defer src="script.js"></script>
-    <script defer src="anime.min.js"></script>
+    <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Car rental</title>
 </head>
 <body>
@@ -42,13 +43,13 @@
         </div>
         <div class="signUp_form">
         <i class="gg-close iconCloseSignUp"></i>
-            <form action="#">
+            <form action="registration.php" method="POST" name="SignUpForm">
                 <span>Sign Up</span>
-                <input type="text" name="firstName" placeholder="First Name">
-                <input type="text" name="lastName" placeholder="Last Name">
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
-                <button class="btn_submit">Sign up</button>
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="email" name="SignUp_email" placeholder="Email" required>
+                <input type="password" name="SignUp_password" placeholder="Password" required>
+                <button class="btn_submitSignUp">Sign up</button>
             </form>
         </div>
     </div>
@@ -59,11 +60,11 @@
        </div>
        <div class="signIn_form">
         <i class="gg-close iconCloseSignIn"></i>
-           <form action="#">
+           <form action="http://localhost/Web%20Project%20ICT600/rentalPage/rentalPage.php" method="POST" name="SignInForm">
                <span>Sign In</span>
-               <input type="email" name="email" placeholder="Email">
-               <input type="password" name="password" placeholder="Password">
-               <button>Sign in</button>
+               <input type="email" name="email" class="email" placeholder="Email" required>
+               <input type="password" name="password" class="password" placeholder="Password" required>
+               <button class="btn_submitSignIn">Sign in</button>
            </form>
        </div>
    </div>
