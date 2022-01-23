@@ -1,3 +1,7 @@
+<?php 
+    include_once('infoRent.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,11 +50,11 @@
                         <img src="honda_civic.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
-                        Honda Civic
+                        <?php echo "$data[0]" ?>
                     </div>
                     <div class="main_card_price">
-                        <span class="price">RM0000 |</span>
-                        <span class="pricePerMonth">RM0000 <span class="month">/ month</span></span>
+                        <span class="price"> RM <?php echo "$carValue[0]" ?> | </span>
+                        <span class="pricePerMonth">RM <?php echo "$pricePerDay[0]" ?>  <span class="month">/ day</span></span>
                     </div>
                     <button class="btnRent">
                         Rent Now
@@ -61,11 +65,11 @@
                         <img src="ford_mustang.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
-                        Honda Civic
+                        <?php echo "$data[1]" ?>
                     </div>
                     <div class="main_card_price">
                         <span class="price">RM0000 |</span>
-                        <span class="pricePerMonth">RM0000 <span class="month">/ month</span></span>
+                        <span class="pricePerMonth">RM0000 <span class="month">/ day</span></span>
                     </div>
                     <button class="btnRent">
                         Rent Now
@@ -77,11 +81,11 @@
                         <img src="nissan-gtr.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
-                        Honda Civic
+                        <?php echo "$data[2]" ?>
                     </div>
                     <div class="main_card_price">
                         <span class="price">RM0000 |</span>
-                        <span class="pricePerMonth">RM0000 <span class="month">/ month</span></span>
+                        <span class="pricePerMonth">RM0000 <span class="month">/ day</span></span>
                     </div>
                     <button class="btnRent">
                         Rent Now
@@ -93,11 +97,11 @@
                         <img src="honda_jazz.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
-                        Honda Civic
+                        <?php echo "$data[3]" ?>
                     </div>
                     <div class="main_card_price">
                         <span class="price">RM0000 |</span>
-                        <span class="pricePerMonth">RM0000 <span class="month">/ month</span></span>
+                        <span class="pricePerMonth">RM0000 <span class="month">/ day</span></span>
                     </div>
                     <button class="btnRent">
                         Rent Now
@@ -108,11 +112,11 @@
                         <img src="toyota_vios.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
-                        Honda Civic
+                        <?php echo "$data[4]" ?>
                     </div>
                     <div class="main_card_price">
                         <span class="price">RM0000 |</span>
-                        <span class="pricePerMonth">RM0000 <span class="month">/ month</span></span>
+                        <span class="pricePerMonth">RM0000 <span class="month">/ day</span></span>
                     </div>
                     <button class="btnRent">
                         Rent Now
@@ -124,11 +128,11 @@
                         <img src="perodua_aruz.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
-                        Honda Civic
+                        <?php echo "$data[5]" ?>
                     </div>
                     <div class="main_card_price">
                         <span class="price">RM0000 |</span>
-                        <span class="pricePerMonth">RM0000 <span class="month">/ month</span></span>
+                        <span class="pricePerMonth">RM0000 <span class="month">/ day</span></span>
                     </div>
                     <button class="btnRent">
                         Rent Now
@@ -140,11 +144,11 @@
                         <img src="perodua_myvi.png" alt="honda_civic">
                     </div>
                     <div class="main_card_carTitle">
-                        Honda Civic
+                        <?php echo "$data[6]" ?>
                     </div>
                     <div class="main_card_price">
                         <span class="price">RM0000 |</span>
-                        <span class="pricePerMonth">RM0000 <span class="month">/ month</span></span>
+                        <span class="pricePerMonth">RM0000 <span class="month">/ day</span></span>
                     </div>
                     <button class="btnRent">
                         Rent Now
