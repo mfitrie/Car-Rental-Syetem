@@ -9,7 +9,11 @@ const containerCarImage = document.querySelector('.main_rentalFormContainer_carI
 const carForm = document.querySelector('.main_rentalFormContainer_rentalForm');
 const carImage = document.querySelector('.main_rentalFormContainer_carImage');
 const carNameForm = document.querySelector('.vehicleName');
-const buttonConfirmRent = document.querySelector('.main_rentalFormContainer_rentalForm button');
+const buttonConfirmRent = document.querySelector('.btnConfirmRent');
+
+
+// CREATE ELEMENT INPUT
+const inputVehicleName = document.createElement("input");
 
 // // Payement form
 // const paymentContainer = document.querySelector('.main_div_paymentContainer');
@@ -32,6 +36,12 @@ const currentRent = document.querySelector('.dropdownContainer');
 
 // OTHER
 const popupBackground = document.querySelector('.background-popup');
+
+
+
+
+
+
 
 
 
@@ -88,20 +98,32 @@ iconLeft.addEventListener('click', function(e){
 
 
 
+
+
 ///////////////////////////// FORM ///////////////////////////// 
 
 car1.addEventListener('click', (e)=>{
     if(e.target === e.currentTarget.childNodes[3]){
         rentForm.classList.add('form-active');
 
-        carForm.setAttribute('data-id', car1.getAttribute(dataId));
+        carForm.setAttribute('data-id', `${car1.getAttribute(dataId)}`);
+
+        // CREATE INPUT FROM JS
+        inputVehicleName.setAttribute('name', 'carName');
+        inputVehicleName.setAttribute('value', car1.getAttribute(dataId));
+        inputVehicleName.style.visibility = "hidden";
+        carForm.appendChild(inputVehicleName);
+
+        
 
         const image = `<img src="${listCarImage[0]}" alt="${car1.getAttribute(dataId)}">`;
         carImage.insertAdjacentHTML('afterbegin', image);
         carNameForm.insertAdjacentHTML('afterbegin', listCarName[0]);
-
-
+        
+        
         popupBackground.style.visibility = 'visible';
+
+
     }
     
 });
@@ -111,10 +133,17 @@ car2.addEventListener('click', (e)=>{
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car2.getAttribute(dataId));
+
+        // CREATE INPUT FROM JS
+        inputVehicleName.setAttribute('name', 'carName');
+        inputVehicleName.setAttribute('value', car2.getAttribute(dataId));
+        inputVehicleName.style.visibility = "hidden";
+        carForm.appendChild(inputVehicleName);
     
         const image = `<img src="${listCarImage[1]}" alt="${car1.getAttribute(dataId)}">`;
         carImage.insertAdjacentHTML('afterbegin', image);
         carNameForm.insertAdjacentHTML('afterbegin', listCarName[1]);
+        
     
         popupBackground.style.visibility = 'visible';    
 
@@ -127,6 +156,12 @@ car3.addEventListener('click', (e)=>{
         rentForm.classList.add('form-active');
         
         carForm.setAttribute('data-id', car3.getAttribute(dataId));
+
+        // CREATE INPUT FROM JS
+        inputVehicleName.setAttribute('name', 'carName');
+        inputVehicleName.setAttribute('value', car3.getAttribute(dataId));
+        inputVehicleName.style.visibility = "hidden";
+        carForm.appendChild(inputVehicleName);
     
     
         const image = `<img src="${listCarImage[2]}" alt="${car3.getAttribute(dataId)}">`;
@@ -143,6 +178,12 @@ car4.addEventListener('click', (e)=>{
         rentForm.classList.add('form-active');
         
         carForm.setAttribute('data-id', car4.getAttribute(dataId));
+
+        // CREATE INPUT FROM JS
+        inputVehicleName.setAttribute('name', 'carName');
+        inputVehicleName.setAttribute('value', car4.getAttribute(dataId));
+        inputVehicleName.style.visibility = "hidden";
+        carForm.appendChild(inputVehicleName);
     
     
         const image = `<img src="${listCarImage[3]}" alt="${car4.getAttribute(dataId)}">`;
@@ -158,6 +199,12 @@ car5.addEventListener('click', (e)=>{
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car5.getAttribute(dataId));
+
+        // CREATE INPUT FROM JS
+        inputVehicleName.setAttribute('name', 'carName');
+        inputVehicleName.setAttribute('value', car5.getAttribute(dataId));
+        inputVehicleName.style.visibility = "hidden";
+        carForm.appendChild(inputVehicleName);
     
         const image = `<img src="${listCarImage[4]}" alt="${car5.getAttribute(dataId)}">`;
         carImage.insertAdjacentHTML('afterbegin', image);
@@ -173,6 +220,12 @@ car6.addEventListener('click', (e)=>{
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car6.getAttribute(dataId));
+
+        // CREATE INPUT FROM JS
+        inputVehicleName.setAttribute('name', 'carName');
+        inputVehicleName.setAttribute('value', car6.getAttribute(dataId));
+        inputVehicleName.style.visibility = "hidden";
+        carForm.appendChild(inputVehicleName);
     
         const image = `<img src="${listCarImage[5]}" alt="${car6.getAttribute(dataId)}">`;
         carImage.insertAdjacentHTML('afterbegin', image);
@@ -187,6 +240,12 @@ car7.addEventListener('click', (e)=>{
         rentForm.classList.add('form-active');
 
         carForm.setAttribute('data-id', car7.getAttribute(dataId));
+
+        // CREATE INPUT FROM JS
+        inputVehicleName.setAttribute('name', 'carName');
+        inputVehicleName.setAttribute('value', car7.getAttribute(dataId));
+        inputVehicleName.style.visibility = "hidden";
+        carForm.appendChild(inputVehicleName);
 
         const image = `<img src="${listCarImage[6]}" alt="${car7.getAttribute(dataId)}">`;
         carImage.insertAdjacentHTML('afterbegin', image);
@@ -203,6 +262,7 @@ car7.addEventListener('click', (e)=>{
 buttonConfirmRent.addEventListener('click', (e)=>{
     e.preventDefault();
     console.log(buttonConfirmRent.parentNode.getAttribute(dataId));
+    document.forms['rentalForm'].submit();
 });
 
 // close form
@@ -217,26 +277,29 @@ iconCloseForm.addEventListener('click', ()=>{
 
 
 
-
-currentRent.addEventListener('click', (e)=>{
-    Swal.fire({
-        title: 'Return the car now?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, return the car'
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
-            'success'
-          )
-        }
-      });
-});
+/////////////////////////////////// CURRENT RENT DROPDOWN MENU ///////////////////////////////////
+if(currentRent !== null){
+    currentRent.addEventListener('click', (e)=>{
+        Swal.fire({
+            title: 'Return the car now?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, return the car'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+          });
+    });
+}
+/////////////////////////////////// CURRENT RENT DROPDOWN MENU ///////////////////////////////////
 
 
 

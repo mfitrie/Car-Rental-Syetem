@@ -4,20 +4,32 @@
     
     session_start();
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    
 
-    if(isset($email) && isset($password)){
-        $SQL = "SELECT firstName FROM customer WHERE email = '$email' ";
-        $QUERY = mysqli_query($CONNECTION, $SQL);
+    if(isset($_POST['email']) && isset($_POST['password'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
 
-        while($CUSTOMER_RESULT = mysqli_fetch_array($QUERY)){
-            $_SESSION['userFirstName'] = $CUSTOMER_RESULT['firstName'];
-            // echo $CUSTOMER_RESULT['firstName'];
-
+        if(isset($email) && isset($password)){
+            $SQL = "SELECT firstName FROM customer WHERE email = '$email' ";
+            $QUERY = mysqli_query($CONNECTION, $SQL);
+    
+            while($CUSTOMER_RESULT = mysqli_fetch_array($QUERY)){
+                $_SESSION['userFirstName'] = $CUSTOMER_RESULT['firstName'];
+                // echo $CUSTOMER_RESULT['firstName'];
+    
+            }
+            mysqli_close($CONNECTION);
+        }else{
+            // header("Location: http://localhost/Web%20Project%20ICT600/frontPage/index.php");
         }
-        mysqli_close($CONNECTION);
+    }else{
+        // echo "no value from frontPage";
     }
+
+    
+
+
 ?>
 
 <!DOCTYPE html>
@@ -85,7 +97,7 @@
                 <!-- <img src="Car_Image/honda_civic.png" alt="honda-civic"> -->
             </div>
             <i class="gg-close iconCloseForm"></i>
-            <form action="#" class="main_rentalFormContainer_rentalForm">
+            <form action="http://localhost/Web%20Project%20ICT600/paymentPage/paymentPage.php" class="main_rentalFormContainer_rentalForm" name="rentalForm" method="GET">
                 <span>Choose your booking</span>
                 <label for="location">Location</label>
                 <select name="location">
@@ -101,14 +113,14 @@
                 <input type="date" name="toDate">
                 <label for="vehicleName">Vehicle Name</label>
                 <span class="vehicleName" name="vehicleName"></span>
-                <button>Confirm Booking</button>
+                <button class="btnConfirmRent">Confirm Booking</button>
             </form>
         </div>
         <div class="background-popup">
 
         </div>
 
-        <div class="main_div_paymentContainer">
+        <!-- <div class="main_div_paymentContainer">
             <i class="gg-close iconClosePayment"></i>
             <p>Credit Card Details</p>
             <img src="/card_debit.png" alt="card debit">
@@ -132,7 +144,7 @@
                 <input type="number" name="cardSecurityCode" min="0" max="999" placeholder="253">
                 <button>Pay</button>
             </form>
-        </div>
+        </div> -->
     </main>
 </body>
 </html>

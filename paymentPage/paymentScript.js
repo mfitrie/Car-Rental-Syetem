@@ -2,8 +2,10 @@
 
 const paymentForm = document.querySelector('.main_div_paymentContainer');
 const backgroundPopup = document.querySelector('.background-popup');
+const btnPay = document.querySelector('.btnPay');
 
-paymentForm.addEventListener('load', function(){
-    // paymentForm.classList.add('.payment-active');
-    console.log("im loaded");
-});
+btnPay.addEventListener('click', function(e){
+    e.preventDefault();
+    document.forms['paymentForm'].submit();
+})
+

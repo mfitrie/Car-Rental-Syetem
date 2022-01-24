@@ -1,3 +1,28 @@
+<?php
+     if(isset($_GET['location']) && isset($_GET['fromDate']) && isset($_GET['toDate']) && isset($_GET['carName'])){
+        session_start();
+
+        // $location = $_GET['location'];
+        // $fromDate = $_GET['fromDate'];
+        // $toDate = $_GET['toDate'];
+        // $carName = $_GET['carName'];
+
+        $rentalPageData = array($_GET['location'], $_GET['fromDate'], $_GET['toDate'], $_GET['carName']);
+        $_SESSION['rentalPageData'] = $rentalPageData;
+
+        // var_dump($_SESSION['rentalPageData']);
+
+        // echo "have value from rentalPage.php";
+
+        // echo $_SESSION['rentalPageData'][2];
+
+        // header("Location: http://localhost/Web%20Project%20ICT600/paymentPage/paymentPage.php");
+    }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,10 +63,10 @@
         <div class="background-popup"></div>
 
         <div class="main_div_paymentContainer payment-active">
-            <a href="#"><i class="gg-close iconClosePayment"></i></a>
+            <a href="http://localhost/Web%20Project%20ICT600/rentalPage/rentalPage.php"><i class="gg-close iconClosePayment"></i></a>
             <p>Credit Card Details</p>
             <img src="card_debit.png" alt="card debit">
-            <form action="#">
+            <form action="http://localhost/Web%20Project%20ICT600/rent_and_payment.php" method="POST" name="paymentForm">
                 <label for="price">Price</label>
                 <span>RM 0000</span>
                 <label for="cardName">Name on Card</label>
@@ -59,7 +84,7 @@
                 </div>            
                 <label for="securityCode">Security Code</label>
                 <input type="number" name="cardSecurityCode" min="0" max="999" placeholder="253" required>
-                <button>Pay</button>
+                <button class="btnPay">Pay</button>
             </form>
         </div>
     </main>
