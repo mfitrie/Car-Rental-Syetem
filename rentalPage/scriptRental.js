@@ -289,7 +289,7 @@ const getDataCurrentRent = function(listRentCard){
     })
     .then(res => {
         console.log(res);
-        if(res !== null){
+        if(res.length !== 0){
             // console.log(listRentCard.childNodes[1]);
             listRentCard.removeChild(listRentCard.childNodes[1]);
 
@@ -307,7 +307,56 @@ const getDataCurrentRent = function(listRentCard){
                 
                 const car = document.querySelector(`.car-${i+1}`);                       
                 car.setAttribute('data-id', data[0]);
-            })
+                
+                // CREATE FORM 
+                const carForm = document.createElement('form');
+                carForm.setAttribute('method','get');
+                carForm.setAttribute('name','formSubmitCurrentRent');
+                carForm.setAttribute('data-id',`${data[0]}`);
+                carForm.setAttribute('action', 'http://localhost/Web%20Project%20ICT600/updateReturnRent.php');
+                car.append(carForm);
+
+                const carReturnInputName = document.createElement('input');
+                carReturnInputName.setAttribute('type','text');
+                carReturnInputName.setAttribute('name','car_name');
+                carReturnInputName.setAttribute('value', `${data[0]}`);
+                carReturnInputName.style.visibility = "hidden";
+
+
+                const fromDate = document.createElement('input');
+                fromDate.setAttribute('type','date');
+                fromDate.setAttribute('name','fromDate');
+                fromDate.setAttribute('value', `${data[1]}`);
+                fromDate.style.visibility = "hidden";
+
+                const toDate = document.createElement('input');
+                toDate.setAttribute('type','date');
+                toDate.setAttribute('name','toDate');
+                toDate.setAttribute('value', `${data[2]}`);
+                toDate.style.visibility = "hidden";
+
+                const inputSubmit = document.createElement('input');
+                inputSubmit.setAttribute('type','submit');
+                inputSubmit.setAttribute('value', 'submit');
+                inputSubmit.style.visibility = "hidden";
+
+                carForm.appendChild(carReturnInputName);
+                carForm.appendChild(fromDate);
+                carForm.appendChild(toDate);
+                carForm.appendChild(inputSubmit);
+
+                
+
+                car.addEventListener('click', function(e){
+                    // document.forms['formSubmitCurrentRent'].submit();
+
+                    // console.log(`car ${data[0]} clicked`);
+
+                    inputSubmit.form.submit();
+                });
+
+
+            });
 
             
         }

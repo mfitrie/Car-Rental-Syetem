@@ -24,7 +24,7 @@
                         FROM car
                         NATURAL JOIN renting
                         NATURAL JOIN customer
-                        WHERE firstName = '$userFirstName';
+                        WHERE firstName = '$userFirstName' AND returnStatus != 'Not Rent';
                         ";
 
     $QUERY = mysqli_query($CONNECTION, $SQL_CAR_RENT);
