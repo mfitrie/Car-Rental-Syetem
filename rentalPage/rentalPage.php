@@ -58,13 +58,20 @@
                 <li>Current Rent</li>
                 <div class="List-rent-card">
                     <p>No car rent yet. Find a nice car and rent it ;)</p>
-                    <!-- <div class="dropdownContainer">
+                    <!-- <div class="dropdownContainer car-1">
                         <img src="ford_mustang.png" alt="car">
                         <div>
                             <span class="carName">ford mustang</span>
                             <span class="rentDate">From <span class="fromDate">11/2/2020</span> to <span class="toDate">2/11/2021</span></span>
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="dropdownContainer car-2">
+                        <img src="ford_mustang.png" alt="car">
+                        <div>
+                            <span class="carName">ford mustang</span>
+                            <span class="rentDate">From <span class="fromDate">11/2/2020</span> to <span class="toDate">2/11/2021</span></span>
+                        </div>
+                    </div>  -->
                     
                 </div>
             </div>
@@ -99,7 +106,7 @@
             <i class="gg-close iconCloseForm"></i>
             <form action="http://localhost/Web%20Project%20ICT600/paymentPage/paymentPage.php" class="main_rentalFormContainer_rentalForm" name="rentalForm" method="GET">
                 <span>Choose your booking</span>
-                <label for="location">Location</label>
+                <label for="location">Location to pick up</label>
                 <select name="location">
                     <option value="Kuala Lumpur">Kuala Lumpur</option>
                     <option value="Shah Alam">Shah Alam</option>

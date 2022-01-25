@@ -278,6 +278,46 @@ iconCloseForm.addEventListener('click', ()=>{
 
 
 /////////////////////////////////// CURRENT RENT DROPDOWN MENU ///////////////////////////////////
+const listRentCard = document.querySelector('.List-rent-card');
+// listRentCard.removeChild(listRentCard.childNodes[]);
+
+
+const getDataCurrentRent = function(listRentCard){
+    fetch('http://localhost/Web%20Project%20ICT600/rentalPage/AJAX_info_rental.php')
+    .then(res => {
+        return res.json();
+    })
+    .then(res => {
+        console.log(res);
+        if(res !== null){
+            // console.log(listRentCard.childNodes[1]);
+            listRentCard.removeChild(listRentCard.childNodes[1]);
+
+            res.forEach((data, i)=>{
+                // console.log(i[0]);
+                let div = `<div class="dropdownContainer car-${i+1}">
+                                    <img src="${listCarImage[i]}" alt="car">
+                                    <div>
+                                        <span class="carName">${data[0]}</span>
+                                        <span class="rentDate">From <span class="fromDate">${data[1]}</span> to <span class="toDate">${data[2]}</span></span>
+                                    </div>
+                        </div>`
+
+                listRentCard.insertAdjacentHTML('afterbegin', div);
+                
+                const car = document.querySelector(`.car-${i+1}`);                       
+                car.setAttribute('data-id', data[0]);
+            })
+
+            
+        }
+    });
+}
+            
+
+
+getDataCurrentRent(listRentCard);
+
 if(currentRent !== null){
     currentRent.addEventListener('click', (e)=>{
         Swal.fire({

@@ -106,7 +106,7 @@ header{
 .List-rent-card div div{
     display: inline-block;
     vertical-align: top;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding: 0.3rem;
 }
 
@@ -129,7 +129,17 @@ header{
 
 
 
-.List-rent-card:hover{
+/* .List-rent-card:hover{
+    background-color: #ddd;
+} */
+
+.car-1:hover,
+.car-2:hover,
+.car-3:hover,
+.car-4:hover,
+.car-5:hover,
+.car-6:hover,
+.car-7:hover{
     background-color: #ddd;
 }
 
