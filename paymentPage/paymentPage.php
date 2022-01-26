@@ -1,13 +1,37 @@
 <?php
+
+    include_once('config.php');
+
+    
+
      if(isset($_GET['location']) && isset($_GET['fromDate']) && isset($_GET['toDate']) && isset($_GET['carName'])){
         session_start();
 
         // $location = $_GET['location'];
         // $fromDate = $_GET['fromDate'];
         // $toDate = $_GET['toDate'];
-        // $carName = $_GET['carName'];
+        $fromDate = explode("-", $_GET['fromDate']);
+        $toDate = explode("-", $_GET['toDate']);
+        $carName = $_GET['carName'];
 
-        $rentalPageData = array($_GET['location'], $_GET['fromDate'], $_GET['toDate'], $_GET['carName']);
+        $pricePerDay = 0;
+
+        // GET THE PRICE PER DAY FROM DATABASE
+        $SQL_FOR_CAR_PRICE = "SELECT pricePerDay
+                            FROM car
+                            WHERE carName = '$carName'";
+
+        $sql_success = mysqli_query($CONNECTION, $SQL_FOR_CAR_PRICE);
+
+        while($RESULT = mysqli_fetch_array($sql_success)){
+            $pricePerDay = (float) $RESULT['pricePerDay'];
+        }
+
+        // CALCULATE PRICE
+        $price = ($toDate[2] - $fromDate[2]) * $pricePerDay;
+
+
+        $rentalPageData = array($_GET['location'], $_GET['fromDate'], $_GET['toDate'], $_GET['carName'], $price);
         $_SESSION['rentalPageData'] = $rentalPageData;
 
         // var_dump($_SESSION['rentalPageData']);
@@ -68,7 +92,7 @@
             <img src="card_debit.png" alt="card debit">
             <form action="http://localhost/Web%20Project%20ICT600/rent_and_payment.php" method="POST" name="paymentForm">
                 <label for="price">Price</label>
-                <span>RM 0000</span>
+                <span>RM <?php echo $price ?></span>
                 <label for="cardName">Name on Card</label>
                 <input type="text" name="cardName" placeholder="Your Name on Card" required>
                 <label for="cardNumber">Card Number</label>

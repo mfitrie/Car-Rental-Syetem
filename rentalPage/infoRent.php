@@ -6,7 +6,7 @@
     $imageCar = [
         'honda_civic.png',
     'ford_mustang.png',
-    'nissan-gtr.png',
+    'nissan_gtr.png',
     'honda_jazz.png',
     'toyota_vios.png',
     'perodua_aruz.png',

@@ -19,7 +19,7 @@ const inputVehicleName = document.createElement("input");
 // const paymentContainer = document.querySelector('.main_div_paymentContainer');
 
 // DATA CAR
-const listCarImage = ["honda_civic.png", "ford_mustang.png", "nissan-gtr.png", "honda_jazz.png", "toyota_vios.png", "perodua_aruz.png", "perodua_myvi.png"];
+const listCarImage = ["honda_civic.png", "ford_mustang.png", "nissan_gtr.png", "honda_jazz.png", "toyota_vios.png", "perodua_aruz.png", "perodua_myvi.png"];
 const listCarName = ["Honda Civic", "Ford Mustang", "Nissan GTR", "Honda Jazz", "Toyota Vios", "Perodua Aruz", "Perodua Myvi"];
 
 // ICON
@@ -258,14 +258,24 @@ car7.addEventListener('click', (e)=>{
 ///////////////////////////// FORM ///////////////////////////// 
 
 
-// button rent form
+
+ 
+
+
+
+
+///////////////////////////// BUTTON RENT FORM ///////////////////////////// 
 buttonConfirmRent.addEventListener('click', (e)=>{
     e.preventDefault();
     console.log(buttonConfirmRent.parentNode.getAttribute(dataId));
     document.forms['rentalForm'].submit();
 });
+///////////////////////////// BUTTON RENT FORM ///////////////////////////// 
 
-// close form
+
+
+
+///////////////////////////// BUTTON CLOSE FORM ///////////////////////////// 
 iconCloseForm.addEventListener('click', ()=>{
     rentForm.classList.remove('form-active');
     containerCarImage.removeChild(containerCarImage.childNodes[0]);
@@ -273,6 +283,8 @@ iconCloseForm.addEventListener('click', ()=>{
 
     popupBackground.style.visibility = 'hidden';
 });
+///////////////////////////// BUTTON CLOSE FORM ///////////////////////////// 
+
 
 
 
@@ -296,7 +308,7 @@ const getDataCurrentRent = function(listRentCard){
             res.forEach((data, i)=>{
                 // console.log(i[0]);
                 let div = `<div class="dropdownContainer car-${i+1}">
-                                    <img src="${listCarImage[i]}" alt="car">
+                                    <img src="${data[0].toLowerCase().split(' ').join('_')}.png" alt="car">
                                     <div>
                                         <span class="carName">${data[0]}</span>
                                         <span class="rentDate">From <span class="fromDate">${data[1]}</span> to <span class="toDate">${data[2]}</span></span>
@@ -348,11 +360,27 @@ const getDataCurrentRent = function(listRentCard){
                 
 
                 car.addEventListener('click', function(e){
-                    // document.forms['formSubmitCurrentRent'].submit();
-
-                    // console.log(`car ${data[0]} clicked`);
-
-                    inputSubmit.form.submit();
+                    
+                    // inputSubmit.form.submit();
+                    // console.log('im clicked');
+                    Swal.fire({
+                        title: 'Return the car now?',
+                        text: "You won't be able to revert this!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, return the car'
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                            inputSubmit.form.submit();
+                            Swal.fire(
+                                'Returned!',
+                                'Rent car has successfully returned',
+                                'success'
+                            )
+                            }
+                      });
                 });
 
 
@@ -367,27 +395,6 @@ const getDataCurrentRent = function(listRentCard){
 
 getDataCurrentRent(listRentCard);
 
-if(currentRent !== null){
-    currentRent.addEventListener('click', (e)=>{
-        Swal.fire({
-            title: 'Return the car now?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, return the car'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-              )
-            }
-          });
-    });
-}
 /////////////////////////////////// CURRENT RENT DROPDOWN MENU ///////////////////////////////////
 
 

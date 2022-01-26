@@ -27,8 +27,11 @@
         echo 'Session Value = '. $sessionValue;
 
 
+        $price = $_SESSION['rentalPageData'][4];
+
+
         $PAYMENT_SQL = "INSERT INTO payment(totalPrice ,cardNumber ,cardName ,expirationMonth, expirationYear, securityCode, status, sessionRentalPage)
-        VALUES (300.00,'$cardNumber','$cardName','$cardMonth','$cardYear', $cardSecurityCode, 'Success', '$sessionValue')";
+        VALUES ($price,'$cardNumber','$cardName','$cardMonth','$cardYear', $cardSecurityCode, 'Success', '$sessionValue')";
 
         $success = mysqli_query($CONNECTION, $PAYMENT_SQL);
 
@@ -55,12 +58,12 @@
             $renting_success = mysqli_query($CONNECTION, $RENTING_SQL);
 
             if($renting_success){
-                $UPDATING_CAR_STATUS = "update car 
-                                        set `returnStatus` = 'Rent'
-                                        where carid in (
-                                            select carid
-                                            from renting
-                                            where userID = $user_id
+                $UPDATING_CAR_STATUS = "UPDATE car 
+                                        SET `returnStatus` = 'Rent'
+                                        WHERE carid IN (
+                                            SELECT carid
+                                            FROM renting
+                                            WHERE userID = $user_id AND fromDate = '$fromDate' AND toDate = '$toDate' AND returnDate IS NULL
                                         )";
 
                 $updating_car_success = mysqli_query($CONNECTION, $UPDATING_CAR_STATUS);
