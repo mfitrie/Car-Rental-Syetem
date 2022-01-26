@@ -55,7 +55,7 @@
         <ul class="header_ul_button">
             <li>Mr. <?php echo $_SESSION['userFirstName'] ?></li>
             <div class="dropdown">
-                <li>Current Rent</li>
+                <li class="current-rent-dropdown">Current Rent</li>
                 <div class="List-rent-card">
                     <p>No car rent yet. Find a nice car and rent it ;)</p>
                     <!-- <div class="dropdownContainer car-1">

@@ -294,6 +294,16 @@ const listRentCard = document.querySelector('.List-rent-card');
 // listRentCard.removeChild(listRentCard.childNodes[]);
 
 
+const countCarIndicator = function(totalCar){
+
+    const countIndicator = document.querySelector('.current-rent-dropdown');
+    // const countCarIndicator_after = window.getComputedStyle(countIndicator, '::after');
+    
+    countIndicator.setAttribute('number', `${totalCar}`);
+
+}
+
+
 const getDataCurrentRent = function(listRentCard){
     fetch('http://localhost/Web%20Project%20ICT600/rentalPage/AJAX_info_rental.php')
     .then(res => {
@@ -305,8 +315,11 @@ const getDataCurrentRent = function(listRentCard){
             // console.log(listRentCard.childNodes[1]);
             listRentCard.removeChild(listRentCard.childNodes[1]);
 
+            countCarIndicator(res.length);
+
             res.forEach((data, i)=>{
-                // console.log(i[0]);
+
+
                 let div = `<div class="dropdownContainer car-${i+1}">
                                     <img src="${data[0].toLowerCase().split(' ').join('_')}.png" alt="car">
                                     <div>
@@ -391,6 +404,8 @@ const getDataCurrentRent = function(listRentCard){
     });
 }
             
+
+
 
 
 getDataCurrentRent(listRentCard);

@@ -64,9 +64,28 @@ header{
     cursor: pointer;
 }
 
+.header_ul_button div li{
+    position: relative;
+}
+
 .header_ul_button div li::before{
     content: url(car_rent.svg);
     margin-top: 1.5rem;
+}
+
+.header_ul_button div li::after{
+    content: attr(number);
+    position: absolute;
+    /* display: inline-block; */
+    background-color: var(--red);
+    width: 8%;
+    border-radius: 50px;
+    /* height: 50%; */
+    text-align: center;
+    color: #fff;
+    font-size: 0.6rem;
+    top: 30%;
+    /* vertical-align: top; */
 }
 
 /************************tooltip************************/
