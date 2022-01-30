@@ -1,1 +1,1 @@
-![Front Page]("C:\Users\Muhammad Fitrie\Desktop\UITM\SEM 5\ICT600\PROJECT\Car rental system ss\front page.png")
+![Front Page](C:\Users\Muhammad Fitrie\Desktop\UITM\SEM 5\ICT600\PROJECT\Car rental system ss\front page.png)
